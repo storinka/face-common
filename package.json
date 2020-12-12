@@ -1,6 +1,6 @@
 {
   "name": "@storinka/face-common",
-  "version": "0.0.4",
+  "version": "0.0.9",
   "description": "storinka face common tools",
   "author": "Davyd Kohut",
   "license": "MIT",
@@ -26,5 +26,8 @@
     "ts-jest": "^25.2.1",
     "ts-node-dev": "^1.0.0-pre.56",
     "typescript": "^3.7.5"
+  },
+  "dependencies": {
+    "cyrillic-to-translit-js": "^3.1.0"
   }
 }
