@@ -1,0 +1,30 @@
+{
+  "name": "@storinka/face-common",
+  "version": "0.0.2",
+  "description": "storinka face common tools",
+  "author": "Davyd Kohut",
+  "license": "MIT",
+  "files": [
+    "**/*"
+  ],
+  "keywords": [
+    "storinka"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/storinka/face-common"
+  },
+  "bugs": {
+    "url": "https://github.com/storinka/face-common/issues"
+  },
+  "scripts": {
+    "build": "rm -rf lib && tsc"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.1.4",
+    "jest": "^25.1.0",
+    "ts-jest": "^25.2.1",
+    "ts-node-dev": "^1.0.0-pre.56",
+    "typescript": "^3.7.5"
+  }
+}
