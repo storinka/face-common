@@ -7,7 +7,7 @@ export const currencySymbols: any = {
     EUR: "€",
 }
 
-export function cc2n(code: string, locale: string = "uk") {
+export function getCurrencySymbol(code: string, locale: string = "uk") {
     if (locale === "uk" || locale === "ru") {
         if (code === "UAH") {
             return "грн";
@@ -25,14 +25,14 @@ export function cc2n(code: string, locale: string = "uk") {
 
 export function getPriceString(currency: string, price: string, locale: string = "uk") {
     if (currency === "USD" || currency === "EUR") {
-        return `${cc2n(currency)} ${price}`;
+        return `${getCurrencySymbol(currency, locale)} ${price}`;
     }
 
     if (["UAH", "RUB", "BYN"].includes(currency)) {
         if (locale !== "uk" && locale !== "ru") {
-            return `${cc2n(currency)} ${price}`;
+            return `${getCurrencySymbol(currency, locale)} ${price}`;
         }
     }
 
-    return `${price} ${cc2n(currency)}`;
+    return `${price} ${getCurrencySymbol(currency, locale)}`;
 }
