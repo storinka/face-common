@@ -37,7 +37,7 @@ export function getCafeFromCache({id, updateVersion, coreVersion, locale}: GetCa
     return cafe;
 }
 
-export function saveCafeToCache(cafe: any, coreVersion?: number) {
+export function saveCafeToCache(cafe: any, coreVersion: number) {
     if (cafe) {
         cafe.__core_version = coreVersion;
 

@@ -104,6 +104,10 @@ function analReportOpenContacts(id: number) {
     return anal(101, id);
 }
 
+function analReportUserIsStillOnline(id: number) {
+    return anal(199, id);
+}
+
 function analReportOpenInfo(id: number) {
     return anal(102, id);
 }
@@ -194,4 +198,9 @@ export function reportContactsWasOpen({cafe}: { cafe: any }) {
 
         return analReportOpenContacts(cafe.hash_id);
     }
+}
+
+
+export function reportUserIsStillOnline({cafe}: { cafe: any }) {
+    return analReportUserIsStillOnline(cafe.hash_id);
 }
