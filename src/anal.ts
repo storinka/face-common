@@ -71,7 +71,7 @@ export function analTID() {
     return tid;
 }
 
-export function anal(ity: number, iid: number, params = {}) {
+export function anal(ity: number, iid: number, params: { push?: string } = {}) {
     if (noAnal) {
         return Promise.reject(new Error("no anal"));
     }
@@ -79,7 +79,7 @@ export function anal(ity: number, iid: number, params = {}) {
     try {
         const tid = analTID();
 
-        return fetch(`${process.env.REACT_APP_ANAL_URL || process.env.VUE_APP_ANAL_URL}/${1}/push`, {
+        return fetch(`${process.env.REACT_APP_ANAL_URL || process.env.VUE_APP_ANAL_URL}/${1}/${params.push ? params.push : "push"}`, {
             method: "PATCH",
             body: JSON.stringify({
                 tid,
@@ -105,7 +105,7 @@ function analReportOpenContacts(id: number) {
 }
 
 function analReportUserIsStillOnline(id: number) {
-    return anal(199, id);
+    return anal(100, id, {push: "pushAlive"});
 }
 
 function analReportOpenInfo(id: number) {
