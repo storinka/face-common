@@ -73,7 +73,7 @@ export function analTID() {
 
 export function anal(ity: number, iid: number, params: { push?: string } = {}) {
     if (noAnal) {
-        return Promise.reject(new Error("no anal"));
+        return Promise.resolve(null);
     }
 
     try {
