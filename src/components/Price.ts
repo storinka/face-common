@@ -46,6 +46,7 @@ const Price = defineComponent({
                         fontSize: "0.8rem"
                     }
                 }, this.map(this.price)),
+                " ",
                 this.priceWithCurrency
             ]
         } else {
